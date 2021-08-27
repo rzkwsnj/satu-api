@@ -1,0 +1,76 @@
+{
+    "name": "rzkswnj/satu-api",
+    "description": "SATU - API: Useful skeleton for RESTful API development, using Slim 4, Eloquent, and JWT.",
+    "keywords": [
+        "satuapi",
+        "php",
+        "jwt",
+        "eloquent",
+        "slim-micro-framework",
+        "rest-api",
+        "mysql",
+        "slim4",
+        "slim",
+        "rest",
+        "api"
+    ],
+    "homepage": "https://github.com/rzkwsnj",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rzkwsnj",
+            "email": "drg.rizkiwisnuaji@gmail.com",
+            "homepage": "https://github.com/rzkswnj"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "ext-openssl": "*",
+        "ext-curl": "*",
+        "Flynsarmy/Slim-Monolog": "*",
+        "illuminate/database": "*",
+        "nesbot/carbon": "*",
+        "pimple/pimple": "^3.4.0",
+        "ramsey/uuid": "^4.2",
+        "slim/psr7": "^1.4.0",
+        "slim/slim": "^4.8.1",
+        "tuupola/slim-jwt-auth": "^3.5",
+        "vlucas/phpdotenv": "^5.3.0",
+        "phpmailer/phpmailer": "*"
+    },
+    "require-dev": {
+        "maurobonfietti/skel-api-slim-php-crud-generator": "dev-master",
+        "nunomaduro/phpinsights": "^2.0.1",
+        "phpunit/phpunit": "^9.5.7",
+        "symfony/console": "^4.4"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.0"
+        },
+        "sort-packages": true,
+        "process-timeout": 0
+    },
+    "suggest": {
+        "ext-mcrypt": "Required for HTTP cookie encryption"
+    },
+    "autoload": {
+        "psr-0":
+        {
+            "Flynsarmy\\SlimMonolog": ".",
+            "Carbon": "src"
+        },
+        "psr-4": {
+            "Rzkwsnj\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-create-project-cmd": [
+            "php -r \"copy('.env.example', '.env');\""
+        ]
+    }
+}
