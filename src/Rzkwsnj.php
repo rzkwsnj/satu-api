@@ -52,6 +52,14 @@ require __DIR__ . '/../vendor/autoload.php';
 
 
 # =========================================
+# S A T U - A P I  DATE TIMEZONE
+# =========================================
+if (!ini_get('date.timezone')) {
+    date_default_timezone_set('Asia/Jakarta');
+}
+
+
+# =========================================
 # S A T U - A P I  D O T E N V
 # =========================================
 $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
